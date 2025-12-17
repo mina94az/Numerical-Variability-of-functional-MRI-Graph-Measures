@@ -1,0 +1,14 @@
+# Data (never commit)
+data/
+*.nii
+*.nii.gz
+*.h5
+*.csv
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
