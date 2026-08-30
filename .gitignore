@@ -8,6 +8,32 @@ data/
 # Jupyter
 .ipynb_checkpoints/
 
+# Generated figures (keep local, do not publish)
+/Fig2-3-GraphMetrics-NPVR/**/*.pdf
+/Fig2-3-GraphMetrics-NPVR/**/*.png
+/Fig2-3-GraphMetrics-NPVR/**/*.tif
+/Fig2-3-GraphMetrics-NPVR/**/*.tiff
+/Fig2-3-GraphMetrics-NPVR/**/*.jpg
+/Fig2-3-GraphMetrics-NPVR/**/*.jpeg
+/Fig2-3-GraphMetrics-NPVR/**/*.svg
+/Fig2-3-GraphMetrics-NPVR/**/*.eps
+/Fig4-RegionalVariability/**/*.pdf
+/Fig4-RegionalVariability/**/*.png
+/Fig4-RegionalVariability/**/*.tif
+/Fig4-RegionalVariability/**/*.tiff
+/Fig4-RegionalVariability/**/*.jpg
+/Fig4-RegionalVariability/**/*.jpeg
+/Fig4-RegionalVariability/**/*.svg
+/Fig4-RegionalVariability/**/*.eps
+/Fig5and6and-Conf_vs_NoConf/**/*.pdf
+/Fig5and6and-Conf_vs_NoConf/**/*.png
+/Fig5and6and-Conf_vs_NoConf/**/*.tif
+/Fig5and6and-Conf_vs_NoConf/**/*.tiff
+/Fig5and6and-Conf_vs_NoConf/**/*.jpg
+/Fig5and6and-Conf_vs_NoConf/**/*.jpeg
+/Fig5and6and-Conf_vs_NoConf/**/*.svg
+/Fig5and6and-Conf_vs_NoConf/**/*.eps
+
 # Python
 __pycache__/
 *.pyc
