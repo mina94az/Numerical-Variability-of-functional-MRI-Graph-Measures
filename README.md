@@ -59,30 +59,6 @@ main columns are:
 | `small_worldness` | Whole-network scalar |
 | `correlation_matrix`, `adj_G` | Correlation and thresholded adjacency matrices |
 
-### `dfW...` and `dfWhc...` files
-
-The downstream CSV datasets use compact names:
-
-| Example | Population | Processing |
-|---|---|---|
-| `dfW_stat05.csv` | PD | With confound regression |
-| `dfWhc_stat05.csv` | HC | With confound regression |
-| `dfN_stat05.csv` | PD | Without confound regression |
-| `dfNhc_stat05.csv` | HC | Without confound regression |
-
-Here, `W` means *with confounds*, `N` means *no confounds*, and `hc` identifies
-healthy controls. A name without `hc` refers to the PD population. The suffixes
-`05`, `1`, `2`, `3`, `4`, and `5` represent thresholds 0.05, 0.10, 0.20, 0.30,
-0.40, and 0.50.
-
-Each CSV row retains subject/session/acquisition information and NPVR terms for
-the six graph metrics. Regional columns (`degree`, `betweeness`, `eigenvec`,
-and `clusteringcoef`) contain serialized 100-region arrays. Global columns
-(`smallworldness` and `avg_shortestPathLength`) contain one value per row. The
-spelling `betweeness` is retained from the source datasets. These values are
-squared subject-level NPVR terms; the group value is reconstructed as
-`sqrt(abs(mean(values)))`, elementwise for regional arrays.
-
 ## Variability calculation
 
 - **NV:** within-subject variability across the 10 perturbed repetitions.
