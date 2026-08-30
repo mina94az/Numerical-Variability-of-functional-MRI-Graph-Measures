@@ -205,7 +205,7 @@ def _binned_flip_statistics(results, left, right, width, include_left):
 
 
 def plot_figure4(results, output_path=DEFAULT_OUTPUT_PATH, alpha=ALPHA, cohort_results=None):
-    """Save Figure 4 with optional HC and PD mean-flip comparison lines."""
+    """Save Figure 4 and a companion 300-dpi TIFF with optional cohort lines."""
     try:
         import matplotlib.pyplot as plt
     except ImportError as error:
@@ -318,6 +318,15 @@ def plot_figure4(results, output_path=DEFAULT_OUTPUT_PATH, alpha=ALPHA, cohort_r
         ha="center", va="bottom", fontsize=10,
     )
     fig.savefig(output_path, dpi=300, bbox_inches="tight")
+    tiff_path = output_path.with_suffix(".tif")
+    fig.savefig(
+        tiff_path,
+        format="tiff",
+        dpi=300,
+        bbox_inches="tight",
+        pil_kwargs={"compression": "tiff_lzw"},
+    )
+    print(f"Saved TIFF: {tiff_path}")
     plt.close(fig)
     return output_path
 

@@ -106,17 +106,15 @@ def building_graph(correlation_matrix, correlation_threshold=None, sparsity_thre
 ##########################################################################################################################################################################################################################################
 # Compute graph measures
 def compute_graph_measures(G):
-    randMetrics = {"C": [], "L": []}
+
     C = nx.average_clustering(G)
     L = nx.average_shortest_path_length(G)
-    for nrand in range (1,51):
-        # Create a random graph with the same number of nodes and edges
-        random_G = nx.erdos_renyi_graph(n=len(G.nodes), p=nx.density(G), seed=42)
-        randMetrics["C"].append(nx.average_clustering(random_G))
-        randMetrics["L"].append(nx.average_shortest_path_length(random_G))
-        # Compute clustering coefficient and characteristic path length for the random graph
-    Cr = np.mean(randMetrics["C"])
-    Lr = np.mean(randMetrics["L"])
+
+    # Create a random graph with the same number of nodes and edges
+    random_G = nx.erdos_renyi_graph(n=len(G.nodes), p=nx.density(G), seed=42)
+    Cr= nx.average_clustering(random_G)
+    Lr= nx.average_shortest_path_length(random_G)
+
     # Compute small-worldness
     small_worldness = (C / Cr) / (L / Lr)
     return {
